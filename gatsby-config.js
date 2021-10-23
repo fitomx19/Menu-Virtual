@@ -16,7 +16,12 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/images/restaurante.png",
+        name: 'Menu Virtual',
+        short_name: 'Menu',
+        start_url: '/',
+        background_color: '#FFFFFF',
+        display: 'minimal-ui',
       },
     },
     "gatsby-plugin-sharp",
