@@ -25,6 +25,7 @@ module.exports = {
       },
     },
     "gatsby-plugin-sharp",
+    "gatsby-plugin-offline",
     `gatsby-plugin-emotion`,
     "gatsby-transformer-sharp",
     {
