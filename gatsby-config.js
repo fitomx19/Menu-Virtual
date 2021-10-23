@@ -20,6 +20,7 @@ module.exports = {
       },
     },
     "gatsby-plugin-sharp",
+    `gatsby-plugin-emotion`,
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
