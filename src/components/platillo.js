@@ -48,6 +48,6 @@ const PlatilloPreview = ({platillos}) => {
     );
   
 }
-const Informacion = ({detalles}) => <div><br/><p>{detalles}</p></div>;
+const Informacion = ({detalles}) => <div><br/><p>-{detalles}-</p></div>;
  
 export default PlatilloPreview;
