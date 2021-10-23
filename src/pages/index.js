@@ -48,24 +48,24 @@ const IndexPage = () => {
             <h1 className="display-2" >Restaurante Los Olivos</h1>
         </div>
         <div className="row">
-        <div className="col-sm-3 col-md-6 col-lg-3">
+        <div className="col">
         <Link to="/">
-        <img src={Facebook} alt="..."/>
+        <img src={Facebook} css={css`width: 40%; `} alt="..."/>
         </Link> 
         </div>
-        <div className="col-sm-3 col-md-6 col-lg-3">
+        <div className="col">
         <Link to="/">
-        <img src={Instagram} alt="..."/>
+        <img src={Instagram} css={css`width: 40%`} alt="..."/>
         </Link> 
         </div>
-        <div className="col-sm-3 col-md-6 col-lg-3">
+        <div className="col">
         <Link to="/">
-        <img src={WhatsApp} alt="..."/>
+        <img src={WhatsApp} css={css`width: 40%`} alt="..."/>
         </Link> 
         </div>
-        <div className="col-sm-3 col-md-6 col-lg-3">
+        <div className="col">
         <Link to="/">
-        <img src={Telefono} alt="..."/>
+        <img src={Telefono} css={css`width: 40%`} alt="..."/>
       </Link>
         </div>
 

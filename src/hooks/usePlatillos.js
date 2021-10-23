@@ -11,9 +11,10 @@ const usePlatillos = () => {
                             titulo
                             slug
                             id
+                            detalles
                             categoria
                             foto{
-                                fluid(maxWidth:300){
+                                fluid(maxWidth:200){
                                 ...GatsbyDatoCmsFluid
                                      }
                             }
@@ -29,7 +30,8 @@ const usePlatillos = () => {
                 titulo: e.titulo,
                 slug: e.slug,
                 categoria: e.categoria,
-                foto: e.foto
+                foto: e.foto,
+                detalles: e.detalles
 
     }))
 }
