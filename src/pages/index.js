@@ -1,16 +1,13 @@
 import * as React from "react"
-import * as Bootstrap from 'react-bootstrap';
 import { css } from "@emotion/react";
 import { Link } from "gatsby"
-import Img from "gatsby-image"
 import PlatilloPreview from '../components/platillo';
 import usePlatillos from "../hooks/usePlatillos";
-import styled from "@emotion/styled";
 import Facebook from '../images/facebook.svg'
 import Instagram from '../images/insta.svg'
 import WhatsApp from '../images/whatsapp.svg'
 import Telefono from '../images/telefono.svg'
-
+import Footer from "../components/footer";
 // markup
 const IndexPage = () => {
   const platillos = usePlatillos();
@@ -101,8 +98,9 @@ const IndexPage = () => {
       </div>
     </div>
     
-     
+    <Footer/> 
     </>
+    
   )
 }
 

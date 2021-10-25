@@ -3,7 +3,7 @@ import Image from 'gatsby-image';
 import {css} from '@emotion/react';
 import styled from '@emotion/styled';
 import {Link} from 'gatsby';
-
+import Showdown from 'showdown';
 
 const Boton = styled.button`
     margin-top: 2rem;
@@ -16,7 +16,7 @@ const Boton = styled.button`
 `;
 
 const PlatilloPreview = ({platillos}) => {
-    
+   
     const [showText, setShowText] = useState(false);
     const onClick = () => setShowText(true);
 
@@ -48,6 +48,11 @@ const PlatilloPreview = ({platillos}) => {
     );
   
 }
-const Informacion = ({detalles}) => <div><br/><p>-{detalles}-</p></div>;
+const converter = new Showdown.Converter();
+const Informacion = ({detalles}) => <div><br/>
+
+    <p>
+    <div  dangerouslySetInnerHTML={{ __html: converter.makeHtml(detalles) }} />
+    </p></div>;
  
 export default PlatilloPreview;
