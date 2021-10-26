@@ -7,6 +7,7 @@ const EnlaceHome = styled(Link)`
   color: #fff;
   text-align: center;
   text-decoration: none;
+  color: inherit;
 `
 
 const Footer = ({title}) => {

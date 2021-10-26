@@ -55,7 +55,7 @@ const IndexPage = () => {
         </Link> 
         </div>
         <div className="col">
-        <Link to="/">
+        <Link to="/tel:5548701797">
         <img src={Instagram} css={css`width: 40%`} alt="..."/>
         </Link> 
         </div>
