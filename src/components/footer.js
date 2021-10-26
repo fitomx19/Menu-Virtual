@@ -24,6 +24,7 @@ const Footer = ({title}) => {
           css={css`
             max-width: 1200px;
             margin: 0 auto;
+            
             @media (min-width: 768px) {
               display: flex;
               align-items: center;
@@ -33,7 +34,7 @@ const Footer = ({title}) => {
         >
           
           <EnlaceHome to="/">
-            <h1 className="display-2">Restaurante los Olivos</h1>
+            <h1 css={css`color: inherit;`} className="display-2">Restaurante los Olivos</h1>
           </EnlaceHome>
         </div>
       </footer>
