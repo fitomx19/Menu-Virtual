@@ -9,6 +9,9 @@ import WhatsApp from '../images/whatsapp.svg'
 import Telefono from '../images/telefono.svg'
 import Footer from "../components/footer";
 import Mapa from "../components/contenido-mapa";
+import Carrusel from "../components/Carrusel";
+
+
 // markup
 const IndexPage = () => {
   const platillos = usePlatillos();
@@ -46,8 +49,9 @@ const IndexPage = () => {
     </div>
     <div className="container">
         <div className="alert" css={css`text-align:center;`}>
-            <h1 className="display-2" >Restaurante Los Olivos</h1>
+            <h1 className="display-1" >Restaurante Los Olivos</h1>
         </div>
+        
         <div className="row">
         <div className="col">
         <Link to="/">
@@ -69,9 +73,11 @@ const IndexPage = () => {
         <img src={Telefono} css={css`width: 40%`} alt="..."/>
       </Link>
         </div>
-
-          
+        
+            
         </div>
+        <br></br>
+        <Carrusel/>
         <div className="container">
         <div style={{ padding: 20 }}></div>
             <input type="text" className="form-control" placeholder="Buscar..." onChange={(e) => searchItems(e.target.value)}/>
@@ -102,6 +108,7 @@ const IndexPage = () => {
       </div>
     </div>
     <Mapa/>
+    
     <Footer/> 
     </>
     
