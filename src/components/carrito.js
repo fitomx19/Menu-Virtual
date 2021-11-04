@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from 'react';
 import { css } from '@emotion/react';
 import useDetallePlatillos from '../hooks/useDetallePlatillos';
-
+import C4 from '../images/C4.png'
 
 
 const Pedido = ({pedido, detalles}) => {
@@ -53,6 +53,7 @@ function Titulo(e){
 
 
     return ( <div css={`padding-top:6rem;`}>
+        
      <div id="test" className="container">
                         <h1 css={css`text-align:center;`}>PEDIDO</h1>
                         <small>A continuacion tienes tus productos, selecciona personalizar producto si deseas agregar algo al platillo</small>
@@ -87,12 +88,12 @@ function Titulo(e){
                    
                 ))}
                 <br/>
-                <h3 css={css`text-align:center;`}>Detalles (ej. La hamburguesa es hawaiana y las crepas las quiero con helado)</h3>
+                <h3 css={css`text-align:center;`}>Detalles (Marque la casilla para seleccionar el producto)</h3>
                         <div className="container">
                        
                        
                         {filtro.length>0? filtro.map((x) => (<div className="form-check"><input type="checkbox"  className="form-check-input" name="extras" value={x.id} onSubmit={()=> Titulo(x.TITULO+x.DETALLES)}/><label className="form-check-label"><p>{(x.TITULO).toUpperCase()}- {(x.DETALLES).toUpperCase()} - $ {x.PRECIO}.00 </p></label></div>)): null} 
-
+                      
                          </div>
                
                 <div className="row"> <label>Datos entrega:</label>

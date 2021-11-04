@@ -9,6 +9,7 @@ import styled from "styled-components";
 import Layout from "../components/Layout";
 import Header from "../components/Header";
 import useDetallePlatillos from '../hooks/useDetallePlatillos';
+import C4 from '../images/C4.png'
 
 
 const Flotante = styled.div`
@@ -59,9 +60,10 @@ const IndexPage = () => {
   return (
    <>
    <Layout>
-      <Flotante>
-        <a css={css`text-decoration: none; color: #FFF;`} href="#test">PEDIDO</a>
-      </Flotante>
+      {/* <Flotante>
+        
+      </Flotante> */}
+      
     <Header/>
 
     
@@ -98,7 +100,7 @@ const IndexPage = () => {
           </div>
       </div>
     </div>
-   
+    <footer class="fixed-bottom"><h3 css={css`text-align:center;`}><a  css={css`text-decoration: none;  `} href="#test"><img className="img-fluid" src={C4}/></a></h3></footer> 
    </Layout>
   
     
