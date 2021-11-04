@@ -46,8 +46,12 @@ const Footer = ({title}) => {
         margin: 0;
         padding: 1rem;
         `}>
+          Horario:Martes-Domingo: 12:00pm-8:00pm
+          Telefono para reservas:(55) 48 70 17 98 
         {title} Todos los derechos Reservados {year} &copy;
       </p>
+      
+     
     </>
   )
 }

@@ -26,6 +26,14 @@ module.exports = {
     },
     "gatsby-plugin-sharp",
     "gatsby-plugin-offline",
+    {
+      resolve: `gatsby-source-mongodb`,
+      options: {
+            connectionString: `mongodb+srv://mike:kinect123@cluster0.r4u1v.gcp.mongodb.net`,
+            dbName: 'myFirstDatabase',
+            collection: `platillos`
+      },
+    },
     `gatsby-plugin-emotion`,
     "gatsby-transformer-sharp",
     {

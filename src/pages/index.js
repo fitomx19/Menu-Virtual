@@ -3,23 +3,41 @@ import { css } from "@emotion/react";
 import { Link } from "gatsby"
 import PlatilloPreview from '../components/platillo';
 import usePlatillos from "../hooks/usePlatillos";
-import Facebook from '../images/facebook.svg'
-import Instagram from '../images/insta.svg'
-import WhatsApp from '../images/whatsapp.svg'
-import Telefono from '../images/telefono.svg'
-import Footer from "../components/footer";
 import Mapa from "../components/contenido-mapa";
 import Carrusel from "../components/Carrusel";
+import styled from "styled-components";
+import Layout from "../components/Layout";
+import Header from "../components/Header";
+import useDetallePlatillos from '../hooks/useDetallePlatillos';
 
+
+const Flotante = styled.div`
+position:fixed;
+	width:70px;
+	height:70px;
+	bottom:40px;
+	right:40px;
+	background-color:#0C9;
+	color:#FFF;
+  z-index:1;
+	border-radius:80px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+`
 
 // markup
 const IndexPage = () => {
   const platillos = usePlatillos();
-  console.log(platillos);
-  //TODO EDITAR SECCION PARA CAMBIAR DATOS
- 
+
+  
+
+
+
+  
   const [searchInput, setSearchInput] = React.useState('');
   const [filteredResults, setFilteredResults] = React.useState([]);
+
+
   const searchItems = (searchValue) => {
     setSearchInput(searchValue)
     if (searchInput !== '') {
@@ -39,43 +57,16 @@ const IndexPage = () => {
   
 
   return (
- 
-    <>
-    <div>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></link>
-      <link rel="preconnect" href="https://fonts.googleapis.com"/>
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-      <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"></link>
-    </div>
+   <>
+   <Layout>
+      <Flotante>
+        <a css={css`text-decoration: none; color: #FFF;`} href="#test">PEDIDO</a>
+      </Flotante>
+    <Header/>
+
+    
     <div className="container">
-        <div className="alert" css={css`text-align:center;`}>
-            <h1 className="display-1" >Restaurante Los Olivos</h1>
-        </div>
         
-        <div className="row">
-        <div className="col">
-        <Link to="/">
-        <img src={Facebook} css={css`width: 40%; `} alt="..."/>
-        </Link> 
-        </div>
-        <div className="col">
-        <Link to="/tel:5548701797">
-        <img src={Instagram} css={css`width: 40%`} alt="..."/>
-        </Link> 
-        </div>
-        <div className="col">
-        <Link to="/">
-        <img src={WhatsApp} css={css`width: 40%`} alt="..."/>
-        </Link> 
-        </div>
-        <div className="col">
-        <Link to="/">
-        <img src={Telefono} css={css`width: 40%`} alt="..."/>
-      </Link>
-        </div>
-        
-            
-        </div>
         <br></br>
         <Carrusel/>
         <div className="container">
@@ -91,7 +82,7 @@ const IndexPage = () => {
             <div className="col-sm-3 col-md-6 col-lg-4">
                 <div className="card">
                   <div className="card-body">
-                    <p className="card-text"><PlatilloPreview key={platillos.id} platillos={platillos}/></p>
+                    <p className="card-text"><PlatilloPreview  key={platillos.id} platillos={platillos}/></p>
                   </div>
                 </div>
             </div>
@@ -99,7 +90,7 @@ const IndexPage = () => {
               <div className="col-sm-3 col-md-6 col-lg-4">
                   <div >
                     <div >
-                      <p ><PlatilloPreview key={platillos.id} platillos={platillos}/></p>
+                      <p ><PlatilloPreview key={platillos.id}   platillos={platillos}/></p>
                     </div>
                   </div>
               </div>
@@ -107,10 +98,13 @@ const IndexPage = () => {
           </div>
       </div>
     </div>
-    <Mapa/>
+   
+   </Layout>
+  
     
-    <Footer/> 
-    </>
+  </>
+  
+
     
   )
 }
