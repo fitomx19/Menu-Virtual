@@ -97,10 +97,9 @@ function Titulo(e){
                
                 <div className="row"> <label>Datos entrega:</label>
                              
-                                <div className="col-md-6"><input type="text" required name="nombre" className="form-control" placeholder="Nombre"   /></div>
-                                <div className="col-md-6"> <input type="text"  required name="direccion" className="form-control" placeholder="Direccion Entrega"   /></div>
-                                <div className="col-md-6"><input type="email"  required  name="email" className="form-control" placeholder="Email Cliente"   /></div>
-                                <div className="col-md-6"> <input type="number" required name="telefono" className="form-control" placeholder="Telefono Cliente"   /></div>
+                                <div className="col-md-4"><input type="text" required name="nombre" className="form-control" placeholder="Nombre"   /></div>
+                                <div className="col-md-4"> <input type="text"  required name="direccion" className="form-control" placeholder="Direccion Entrega"   /></div>
+                                <div className="col-md-4"> <input type="number" required name="telefono" className="form-control" placeholder="Telefono Cliente"   /></div>
                                
                                 
                                
