@@ -78,9 +78,7 @@ function Titulo(e){
                              <input  value="PERSONALIZAR PRODUCTO" className="form-control btn btn-warning"  type="button" onClick={() => Alerta(e.slug)} />
                          </div>
 
-                         
-
-                    
+                        
                       </div>   
                       <div css={css`height:1rem;`}></div>
                      </>
@@ -114,7 +112,7 @@ function Titulo(e){
                     <div  css={css`text-align:center; `}>
                         <br/>
                         <h2>ACEPTAMOS</h2>
-                        <img src={C5} className="img-fluid" />
+                        
                     </div>
            
                 </div>
