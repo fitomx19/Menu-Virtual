@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from 'react';
 import { css } from '@emotion/react';
 import useDetallePlatillos from '../hooks/useDetallePlatillos';
-import C5 from '../images/C5.png';
+
 
 const Pedido = ({pedido, detalles}) => {
 const [busqueda, busquedaInput] = useState('');
