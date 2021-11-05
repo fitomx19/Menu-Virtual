@@ -54,7 +54,7 @@ function Titulo(e){
     return ( <div css={`padding-top:6rem;`}>
         
      <div id="test" className="container">
-                        <h1 css={css`text-align:center;`}>PEDIDO</h1>
+                        <h1 css={css`text-align:center;`}>TU PEDIDO</h1>
                         <small>A continuacion tienes tus productos, selecciona personalizar producto si deseas agregar algo al platillo</small>
                         <div><br/></div>
                         <form action="http://localhost:3000/gatsby" method="POST">
